@@ -1,0 +1,140 @@
+li {
+  list-style: none;
+}
+
+#list li {
+  cursor: pointer;
+  padding: 5px 10px;
+}
+#list li:hover {
+  background-color: #ffefc2;
+  color: #6e4324ba;
+}
+
+#list ul {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px 160px;
+}
+
+table {
+  border-spacing: 0;
+}
+
+table thead {
+  background-color: #ffdc7b;
+}
+table thead th {
+  padding: 10px 0;
+  color: #4e2f0c;
+}
+table td {
+  padding: 10px 0;
+  border-bottom: 0.2px solid #471f030f;
+  cursor: pointer;
+}
+table td:nth-of-type(1) {
+  width: 6%;
+}
+table td:nth-of-type(2) {
+  width: 10%;
+}
+table td:nth-of-type(3) div {
+  white-space: normal;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+table td:nth-of-type(4) {
+  width: 10%;
+}
+table td:nth-of-type(5) {
+  width: 22%;
+}
+table tr td:nth-of-type(6) {
+  width: 22%;
+}
+table tr:last-of-type td {
+  border-bottom: 1.3px solid #6e4324ba;
+}
+
+#write li {
+  display: flex;
+  align-items: center;
+  padding-bottom: 5px;
+}
+
+#write li p {
+  width: 30%;
+  background-color: #ffdc7b;
+  margin: 0;
+  padding: 20px;
+  text-align: left;
+  font-weight: 600;
+  color: #583c0d;
+}
+#write ul > li > div.number{
+  border: 1px solid transparent;
+
+}
+#write li input,#write li div {
+  margin: 0 10px;
+  padding: 5px;
+  height: 47px;
+  line-height: 47px;
+  width: 55%;
+  border: 1px solid #4e2f0c6b;
+  text-align: left;
+}
+#write li:last-of-type p {
+  padding-bottom: 120px;
+}
+#write li textarea,#write li div.contentBox {
+  margin: 0 10px;
+  height: 148px;
+  width: 55%;
+  padding: 5px;
+  border: 1px solid #4e2f0c6b;
+  line-height: 23px;
+}
+#write li div.contentBox{
+  overflow: scroll;
+}
+
+/*button style*/
+
+.writeButton {
+  background-color: #fafafa;
+  color: #583c0d;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: 1px solid #4e2f0c6b;
+  font-weight: 600;
+  float: right;
+  cursor: pointer;
+}
+.writeButton:hover{
+  background-color: #faf5e5;
+  border: 1px solid #faf5e5;
+
+}
+.buttonBox button{
+  font-weight: 600;
+  color: #583c0d;
+  padding: 10px 20px;
+  background-color: #fafafa;
+  border-radius: 5px;
+  border: 1px solid #4e2f0c6b;
+  cursor: pointer;
+}
+.buttonBox button:nth-of-type(1){
+  margin-right: 10px;
+}
+.buttonBox button:nth-of-type(2){
+  margin-right: 10px;
+}
+.buttonBox button:hover{
+  background-color: #faf5e5;
+  border: 1px solid #faf5e5;
+}
