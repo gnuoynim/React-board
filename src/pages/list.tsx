@@ -3,8 +3,7 @@ import axios from "axios";
 import { Link, Navigate } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import BaseBoradInterface from "../interface/base-borad-interface";
-import dayjs from 'dayjs'
-
+import dayjs from "dayjs";
 
 const List = () => {
   const navigate = useNavigate();
@@ -25,10 +24,8 @@ const List = () => {
       .then(function (res) {
         const response = res.data;
         const responseResults = response.results;
-
         setState(responseResults);
         setPageCount(Math.ceil(response.count / 10));
-
       })
       .catch(function () {
         alert("error");
@@ -65,7 +62,6 @@ const List = () => {
         </thead>
         <tbody>
           {state.map((item) => (
-
             <tr key={item.id} onClick={() => handlePage(item.id)}>
               <td>
                 {item.id}
@@ -76,8 +72,12 @@ const List = () => {
                 <div>{item.content}</div>
               </td>
               <td>{item.name}</td>
-              <td>{dayjs(item.mod_date.toString()).format('YYYY-MM-DD HH:MM')}</td>
-              <td>{dayjs(item.reg_date.toString()).format('YYYY-MM-DD HH:MM')}</td>
+              <td>
+                {dayjs(item.mod_date.toString()).format("YYYY-MM-DD HH:MM")}
+              </td>
+              <td>
+                {dayjs(item.reg_date.toString()).format("YYYY-MM-DD HH:MM")}
+              </td>
             </tr>
           ))}
         </tbody>
@@ -87,6 +87,7 @@ const List = () => {
           <li
             key={index + 1}
             onClick={(event) => handleChange(event, index + 1)}
+            className={page ==index+1? 'on':''}
           >
             {index + 1}
           </li>
